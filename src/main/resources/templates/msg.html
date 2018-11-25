@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatter</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/ajaxhandle.js"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="main">
+    <div class="topBar">
+        <button id="connect">connect</button>
+        <button id="disconnect">disconnect</button>
+        <select id="group">
+            <option value="1">group 1</option>
+            <option value="2">group 2</option>
+            <option value="3">group 3</option>
+            <option value="4">group 4</option>
+            <option value="5">group 5</option>
+            <option value="6">group 6</option>
+            <option value="7">group 7</option>
+            <option value="8">group 8</option>
+            <option value="9">group 9</option>
+            <option value="10">group 10</option>
+            <option value="11">group 11</option>
+            <option value="12">group 12</option>
+        </select>
+        <i style="color: red" id="connectState">disconnected</i>
+    </div>
+    <div class="msgBox" id="msgBox"></div>
+    <div class="sendBox">
+        <h3 th:text="${'user: '+name}"></h3>
+        <label for="msg">chat box:</label>
+        <br>
+        <input  th:value="${name}" readonly>
+        <br>
+        <textarea id="msg" type="text" rows="3" cols="10"></textarea>
+        <br>
+        <button id="send">send</button>
+    </div>
+</div>
+</body>
+</html>

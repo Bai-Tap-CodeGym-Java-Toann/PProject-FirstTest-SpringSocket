@@ -1,0 +1,30 @@
+.main {
+    margin: 80px auto;
+    width: 66%;
+    height: 500px;
+    text-align: left;
+}
+
+.topBar {
+    margin: 1% auto;
+    width: 98%;
+    height: 8%;
+    background: grey;
+    border: solid;
+}
+
+.msgBox {
+    margin: 1% auto;
+    background: white;
+    width: 98%;
+    height: 60%;
+    border: solid;
+}
+
+.sendBox {
+    margin: 1% auto;
+    width: 98%;
+    background: red;
+    height: 28%;
+    border: solid;
+}
